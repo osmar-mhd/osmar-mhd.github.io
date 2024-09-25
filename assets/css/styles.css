@@ -1,0 +1,157 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to bottom, rgb(20, 10, 26), rgb(60, 62, 61));
+}
+
+/* Header */
+header {
+    background-image: linear-gradient(to right, #0a0815d5, #110821);
+    padding: 2em;
+    width: 1em;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+  
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+  
+header nav a {
+    margin-bottom: 1em;
+    color: rgba(255, 255, 255, 0.498);
+    border-bottom: 0.1em solid #ffcc00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+    font-size: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+  
+header nav a:hover {
+    color: #ffcc00;
+    opacity: 0.95;
+}
+
+/* Sección y Artículo */
+section,
+article {
+    margin-left: 5em;
+    padding: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    min-height: 100vh;
+}
+
+/* Home */
+#home {
+    background-image: linear-gradient(to right, rgb(3, 26, 50), rgb(0, 0, 0));
+    color: rgba(255, 255, 255, 0.754);
+}
+
+#home ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Usar flexbox para distribuir los íconos */
+    justify-content: center; /* Centrar los íconos */
+}
+
+#home li {
+    margin: 0 1em; /* Espacio entre los enlaces */
+}
+
+#home a {
+    color: rgba(255, 255, 255, 0.85); /* Color de los enlaces */
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 2em; /* Tamaño de fuente */
+}
+
+#home a:hover {
+    color: #ffcc00; /* Color en hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 580px) {
+    header nav a {
+        margin-right: 8em; /* Reducimos el margen derecho para dejar espacio entre los elementos */
+        display: flex;
+        flex-direction: column; /* Mantenemos la dirección del flex a vertical */
+    }
+  
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Distribuye el espacio equitativamente entre los elementos */
+    }
+
+    section,
+    article,
+    footer {
+        margin-left: 0; /* Reinicia el margen izquierdo */
+    }
+  
+    header {
+        padding: 0;
+        width: 100%; /* Asegura que el header abarque todo el ancho */
+        height: 8em;
+        z-index: 1000; /* Mantiene el header por encima de otros elementos */
+        position: fixed;
+        bottom: 0; /* Cambiar a fixed bottom para footer */
+    }
+  
+    main {
+        margin-bottom: 8em; /* Proporciona espacio en la parte inferior del main */
+        position: relative;
+        z-index: 1;
+    }
+}
+  
+/* Botones - Input */
+input[type="button"],
+input[type="submit"],
+button {
+    background-color: rgb(10, 140, 245);
+    color: rgb(255, 255, 255);
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    border: none;
+    border-radius: 5px; /* Simplificado */
+}
+  
+/* Botón */
+button:hover {
+    background-color: rgb(62, 208, 62);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+    border-radius: 5px; /* Simplificado */
+}
+
+/* Efectos */
+.reflejo {
+    -webkit-box-reflect: below 0.1px linear-gradient(transparent, #0004);
+    transition: all 0.3s ease-in-out; /* Simplificado */
+}
+  
+.sombra {
+    box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+    border-radius: 5px; /* Simplificado */
+}
