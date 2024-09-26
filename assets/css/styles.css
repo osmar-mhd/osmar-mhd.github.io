@@ -1,11 +1,11 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    background-image: linear-gradient(to bottom, rgb(20, 10, 26), rgb(60, 62, 61));
+    background-image: linear-gradient(to bottom, rgb(21, 14, 25), rgb(45, 24, 3));
 }
 
 /* Header */
 header {
-    background-image: linear-gradient(to right, #0a0815d5, #110821);
+    background-image: linear-gradient(to right, #171235e7, #110821);
     padding: 2em;
     width: 1em;
     display: flex;
@@ -18,7 +18,7 @@ header {
     left: 0;
     bottom: 0;
 }
-  
+
 header nav ul {
     list-style: none;
     padding: 0;
@@ -26,8 +26,8 @@ header nav ul {
   
 header nav a {
     margin-bottom: 1em;
-    color: rgba(255, 255, 255, 0.498);
-    border-bottom: 0.1em solid #ffcc00;
+    color: rgba(255, 255, 255, 0.754);
+    border-bottom: 0.1em solid #007BFF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,86 +41,200 @@ header nav a {
 }
   
 header nav a:hover {
-    color: #ffcc00;
+    color: #007BFF;
     opacity: 0.95;
 }
 
-/* Sección y Artículo */
-section,
-article {
+/* Añadir margen izquierdo al contenido principal para que no se solape */
+main {
     margin-left: 5em;
+}
+
+/* Sección */
+/* General layout settings */
+section {
     padding: 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: justify;
-    min-height: 100vh;
 }
 
-/* Home */
-#home {
-    background-image: linear-gradient(to right, rgb(3, 26, 50), rgb(0, 0, 0));
-    color: rgba(255, 255, 255, 0.754);
+/* Center the banner text */
+.banner {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2em; /* Space between banner and content */
 }
 
-#home ul {
+/* Flexbox for content layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5em; /* Adds space between content and contact */
+}
+
+/* Info section to the left */
+.info {
+    flex: 1; /* Takes equal space */
+    margin-right: 2em; /* Space between info and skills */
+}
+
+/* Skills section to the right */
+.skills {
+    flex: 1; /* Takes equal space */
+}
+
+/* Contact section at the bottom, fixed */
+.contact {
+    position: fixed;
+    bottom: 0;
+    background-color: #0000004b;
+    text-align: center;
+    padding: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the tech skills and connect links */
+ul.tech-skills li,
+ul.connect li {
+    margin-bottom: 5px;
+}
+
+ul.connect {
     list-style: none;
     padding: 0;
-    display: flex; /* Usar flexbox para distribuir los íconos */
-    justify-content: center; /* Centrar los íconos */
+    display: flex;
+    justify-content: center; /* Centers the links */
 }
 
-#home li {
-    margin: 0 1em; /* Espacio entre los enlaces */
+ul.connect li {
+    margin: 0 10px;
+}
+
+ul.connect a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Estilos para el h1 */
+h1 {
+    font-size: 2em; /* Tamaño grande para destacar */
+    color: #ffffff; /* Contraste sobre fondo oscuro */
+    letter-spacing: 1px; /* Espaciado entre letras para darle elegancia */
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para resaltar */
+}
+
+/* Estilos para el h2 */
+h2 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #c7c7c7; /* Color gris claro */
+    margin-bottom: 0.8em;
+    letter-spacing: 1px;
+    text-align: left;
+    border-bottom: 2px solid  #10c5b9; /* Línea inferior de separación */
+    padding-bottom: 0.3em; /* Espacio debajo del título */
+}
+
+/* Estilos para el h3 */
+h3 {
+    font-size: 1em;
+    color: #e0e0e0; /* Color más claro que el h2 */
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+    text-align: center;
+    border-left: 4px solid #10c5b9; /* Barra vertical de color para destacar */
+    padding-left: 0.5em; /* Espacio entre el borde izquierdo y el texto */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#home {
+    background-image: linear-gradient(to right, rgb(1, 12, 23), rgba(24, 33, 57, 0.33));
+    color: rgba(255, 255, 255, 0.754);
+    animation: fadeIn 2s ease-in-out;
+}
+
+ul.tech-skills li {
+    display: block;
+    margin-bottom: 5px;
+}
+
+ul.connect {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+ul.connect li {
+    margin: 0 1em;
 }
 
 #home a {
-    color: rgba(255, 255, 255, 0.85); /* Color de los enlaces */
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none; /* Quitar subrayado */
-    font-size: 2em; /* Tamaño de fuente */
+    font-size: 1.5em; /* Tamaño de fuente */
+    position: relative;
+    padding-bottom: 2px;
+    vertical-align: middle;
+    transition: all 0.3s ease;  /* Transición suave */
 }
 
 #home a:hover {
-    color: #ffcc00; /* Color en hover */
+    color: #10c5b9; /* Color en hover */
 }
 
-/* Responsive Design */
-@media screen and (max-width: 580px) {
-    header nav a {
-        margin-right: 8em; /* Reducimos el margen derecho para dejar espacio entre los elementos */
-        display: flex;
-        flex-direction: column; /* Mantenemos la dirección del flex a vertical */
-    }
-  
-    header nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center; /* Distribuye el espacio equitativamente entre los elementos */
-    }
-
-    section,
-    article,
-    footer {
-        margin-left: 0; /* Reinicia el margen izquierdo */
-    }
-  
-    header {
-        padding: 0;
-        width: 100%; /* Asegura que el header abarque todo el ancho */
-        height: 8em;
-        z-index: 1000; /* Mantiene el header por encima de otros elementos */
-        position: fixed;
-        bottom: 0; /* Cambiar a fixed bottom para footer */
-    }
-  
-    main {
-        margin-bottom: 8em; /* Proporciona espacio en la parte inferior del main */
-        position: relative;
-        z-index: 1;
-    }
+a i.fa-github  {
+    color: #7c7c7c; /* Color de GitHub */
 }
-  
+
+/* Estilo para el enlace de LinkedIn */
+a i.fa-linkedin {
+    color: #0A66C2; /* Color de LinkedIn */
+}
+
+/* Crea la línea debajo del texto */
+#home a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #10c5b9; /* Color de la línea */
+    transition: width 0.3s ease;  /* Transición suave al expandir la línea */
+}
+
+/* Cuando el mouse pasa sobre el enlace */
+#home a:hover::after {
+    width: 100%;  /* La línea se expande a todo el ancho del enlace */
+}
+
+/* Estilo para el texto */
+a span {
+    font-size: 16px;         /* Ajusta el tamaño del texto */
+    vertical-align: middle;  /* Alinea el texto con el icono */
+}
+
+#home p {
+    line-height: 1.6;
+    margin: 1em 0;
+    color: #ffffffc7; /* Un color más oscuro para el texto */
+}
+
+#home strong {
+    color: #007BFF; /* Color azul para resaltar habilidades */
+}
+
 /* Botones - Input */
 input[type="button"],
 input[type="submit"],
@@ -146,11 +260,6 @@ button:hover {
 }
 
 /* Efectos */
-.reflejo {
-    -webkit-box-reflect: below 0.1px linear-gradient(transparent, #0004);
-    transition: all 0.3s ease-in-out; /* Simplificado */
-}
-  
 .sombra {
     box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
     border-radius: 5px; /* Simplificado */
