@@ -29,13 +29,49 @@ header {
     main {
         margin-left: 5em;
     }
+
+    /* Content layout */
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 5em;
+    }
+
+    /* Info left */
+
+    .info {
+        flex: 1; 
+        margin-right: 2em; /* Space between info and skills */
+    }
+
+    /* Skills right */
+
+    .skills {
+        flex: 1;
+    }
+
+    /* Contact section fixed */
+
+    .contact {
+        position: fixed;
+        bottom: 0;
+        background-color: #000000;
+        text-align: center;
+        padding: 1em 0;
+        border-radius: 8px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        right: 0;
+    }
+
 }
 
 /* Ajustes para pantallas medianas (iPads) */
 @media (max-width: 910px) {
     header {
-        padding: 0;
         width: 100%;
+        padding: 0;
         height: auto;
         position: fixed;
         top: auto;
@@ -47,9 +83,9 @@ header {
     footer,
     main {
         margin: auto;
+        padding: auto;
         width: auto;
         height: auto;
-        margin-bottom: auto;
         position: relative;
     }
 
@@ -57,14 +93,15 @@ header {
         flex-direction: column; /* Cambia la dirección del contenido a vertical */
         justify-content: center; /* Centra los elementos */
     }
-    
-    .info {
-        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
-        margin-bottom: 2em; /* Añade un margen inferior entre las secciones */
-    }
 
-    .skills {
-        margin-bottom: 2em; /* Añade margen inferior si es necesario */
+    .contact {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #000000;
+        text-align: center;
+        padding: 1em 0;
+        z-index: 1000;
     }
 }
 
@@ -143,41 +180,6 @@ section {
     margin-bottom: 2em;
 }
 
-/* Content layout */
-
-.content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 5em;
-}
-
-/* Info left */
-
-.info {
-    flex: 1; 
-    margin-right: 2em; /* Space between info and skills */
-}
-
-/* Skills right */
-
-.skills {
-    flex: 1;
-}
-
-/* Contact section fixed */
-
-.contact {
-    position: fixed;
-    bottom: 0;
-    background-color: #0000004b;
-    text-align: center;
-    padding: 1em 0;
-    border-radius: 8px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    right: 0;
-}
-
 /* Estilos para el h1 */
 
 h1 {
@@ -223,13 +225,6 @@ ul.connect li {
 ul.tech-skills li {
     display: block;
     margin-bottom: 5px;
-}
-
-ul.connect {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 ul.connect li {
