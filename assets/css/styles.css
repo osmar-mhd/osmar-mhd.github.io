@@ -1,11 +1,14 @@
+/* Body */
+
 body {
     font-family: 'Open Sans', sans-serif;
     background-image: linear-gradient(to bottom, rgb(21, 14, 25), rgb(45, 24, 3));
 }
 
 /* Header */
+
 header {
-    background-image: linear-gradient(to right, #171235e7, #110821);
+    background-image: linear-gradient(to right, #08051b, #110821);
     padding: 2em;
     width: 1em;
     display: flex;
@@ -17,6 +20,38 @@ header {
     top: 0;
     left: 0;
     bottom: 0;
+}
+
+@media (min-width: 910px){
+    header {
+        background-image: linear-gradient(to right, #171235e7, #110821);
+    }
+    main {
+        margin-left: 5em;
+    }
+}
+
+/* Ajustes para pantallas medianas (iPads) */
+@media (max-width: 910px) {
+    header {
+        padding: 0;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: auto;
+        bottom: 0;
+    }
+    
+    section,
+    article,
+    footer,
+    main {
+        margin: auto;
+        width: auto;
+        height: auto;
+        margin-bottom: auto;
+        position: relative;
+    }
 }
 
 header nav ul {
@@ -45,13 +80,9 @@ header nav a:hover {
     opacity: 0.95;
 }
 
-/* Añadir margen izquierdo al contenido principal para que no se solape */
-main {
-    margin-left: 5em;
-}
 
-/* Sección */
-/* General layout settings */
+/* Section */
+
 section {
     padding: 5em;
     display: flex;
@@ -61,33 +92,67 @@ section {
     text-align: justify;
 }
 
-/* Center the banner text */
+/* Home */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.sombra {
+    box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+    border-radius: 5px;
+}
+
+#home {
+    background-image: linear-gradient(to right, rgb(1, 12, 23), rgba(24, 33, 57, 0.33));
+    color: rgba(255, 255, 255, 0.754);
+    animation: fadeIn 2s ease-in-out;
+}
+
+#home p {
+    line-height: 1.6;
+    margin: 1em 0;
+    color: #ffffffc7;
+}
+
+#home strong {
+    color: #007BFF; 
+}
+
+
+/* Banner */
+
 .banner {
     text-align: center;
     width: 100%;
-    margin-bottom: 2em; /* Space between banner and content */
+    margin-bottom: 2em;
 }
 
-/* Flexbox for content layout */
+/* Content layout */
+
 .content {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 5em; /* Adds space between content and contact */
+    margin-bottom: 5em;
 }
 
-/* Info section to the left */
+/* Info left */
+
 .info {
-    flex: 1; /* Takes equal space */
+    flex: 1; 
     margin-right: 2em; /* Space between info and skills */
 }
 
-/* Skills section to the right */
+/* Skills right */
+
 .skills {
-    flex: 1; /* Takes equal space */
+    flex: 1;
 }
 
-/* Contact section at the bottom, fixed */
+/* Contact section fixed */
+
 .contact {
     position: fixed;
     bottom: 0;
@@ -99,9 +164,50 @@ section {
     right: 0;
 }
 
-/* Style the tech skills and connect links */
+/* Estilos para el h1 */
+
+h1 {
+    font-size: 2em;
+    color: #ffffff; 
+    letter-spacing: 1px; 
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos para el h2 */
+
+h2 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #c7c7c7;
+    margin-bottom: 0.8em;
+    letter-spacing: 1px;
+    text-align: left;
+    border-bottom: 2px solid  #10c5b9;
+    padding-bottom: 0.3em;
+}
+
+/* Estilos para el h3 */
+
+h3 {
+    font-size: 0.5em;
+    color: #e0e0e0; 
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+    text-align: center;
+    border-left: 4px solid #10c5b9; 
+    padding-left: 0.5em;
+}
+
+/* Tech Skills and Connect links */
+
 ul.tech-skills li,
 ul.connect li {
+    margin-bottom: 5px;
+}
+
+ul.tech-skills li {
+    display: block;
     margin-bottom: 5px;
 }
 
@@ -109,59 +215,11 @@ ul.connect {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centers the links */
+    justify-content: center;
 }
 
 ul.connect li {
     margin: 0 10px;
-}
-
-/* Estilos para el h1 */
-h1 {
-    font-size: 2em; /* Tamaño grande para destacar */
-    color: #ffffff; /* Contraste sobre fondo oscuro */
-    letter-spacing: 1px; /* Espaciado entre letras para darle elegancia */
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para resaltar */
-}
-
-/* Estilos para el h2 */
-h2 {
-    font-size: 1em;
-    font-weight: 600;
-    color: #c7c7c7; /* Color gris claro */
-    margin-bottom: 0.8em;
-    letter-spacing: 1px;
-    text-align: left;
-    border-bottom: 2px solid  #10c5b9; /* Línea inferior de separación */
-    padding-bottom: 0.3em; /* Espacio debajo del título */
-}
-
-/* Estilos para el h3 */
-h3 {
-    font-size: 0.5em;
-    color: #e0e0e0; /* Color más claro que el h2 */
-    margin-bottom: 0.5em;
-    letter-spacing: 1px;
-    text-align: center;
-    border-left: 4px solid #10c5b9; /* Barra vertical de color para destacar */
-    padding-left: 0.5em; /* Espacio entre el borde izquierdo y el texto */
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-#home {
-    background-image: linear-gradient(to right, rgb(1, 12, 23), rgba(24, 33, 57, 0.33));
-    color: rgba(255, 255, 255, 0.754);
-    animation: fadeIn 2s ease-in-out;
-}
-
-ul.tech-skills li {
-    display: block;
-    margin-bottom: 5px;
 }
 
 ul.connect, 
@@ -180,35 +238,37 @@ ul.connect-invisible li {
 ul.connect a,
 ul.connect-invisible a {
     color: rgba(255, 255, 255, 0.85);
-    text-decoration: none; /* Quitar subrayado */
-    font-size: 2em; /* Tamaño de fuente para connect */
+    text-decoration: none;
+    font-size: 2em;
     position: relative;
     padding-bottom: 2px;
     vertical-align: middle;
-    transition: all 0.3s ease; /* Transición suave */
+    transition: all 0.3s ease; 
 }
 
 ul.connect-invisible a {
-    font-size: 1em; /* Tamaño de fuente menor para connect-invisible */
+    font-size: 1em;
 }
 
 ul.connect a:hover,
 ul.connect-invisible a:hover {
-    color: #10c5b9; /* Color en hover para ambos */
+    color: #10c5b9;
 }
 
 ul.connect a i.fa-github,
 ul.connect-invisible a i.fa-github {
-    color: #7c7c7c; /* Color de GitHub */
+    color: #7c7c7c; 
 }
 
-/* Estilo para el enlace de LinkedIn */
+/* LinkedIn */
+
 ul.connect a i.fa-linkedin,
 ul.connect-invisible a i.fa-linkedin {
-    color: #0A66C2; /* Color de LinkedIn */
+    color: #0A66C2; 
 }
 
-/* Crea la línea debajo del texto */
+/* Línea */
+
 ul.connect a::after,
 ul.connect-invisible a::after {
     content: '';
@@ -217,31 +277,21 @@ ul.connect-invisible a::after {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #10c5b9; /* Color de la línea */
-    transition: width 0.3s ease; /* Transición suave al expandir la línea */
+    background-color: #10c5b9; 
+    transition: width 0.3s ease; 
 }
 
-/* Cuando el mouse pasa sobre el enlace */
 ul.connect a:hover::after,
 ul.connect-invisible a:hover::after {
-    width: 100%; /* La línea se expande a todo el ancho del enlace */
+    width: 100%; 
 }
 
 /* Estilo para el texto */
+
 ul.connect a span,
 ul.connect-invisible a span {
-    font-size: 16px; /* Ajusta el tamaño del texto */
-    vertical-align: middle; /* Alinea el texto con el icono */
-}
-
-#home p {
-    line-height: 1.6;
-    margin: 1em 0;
-    color: #ffffffc7; /* Un color más oscuro para el texto */
-}
-
-#home strong {
-    color: #007BFF; /* Color azul para resaltar habilidades */
+    font-size: 16px;
+    vertical-align: middle;
 }
 
 /* Botones - Input */
@@ -264,12 +314,6 @@ button:hover {
     background-color: rgb(62, 208, 62);
     color: rgb(0, 0, 0);
     cursor: pointer;
-    box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
-    border-radius: 5px; /* Simplificado */
-}
-
-/* Efectos */
-.sombra {
     box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
     border-radius: 5px; /* Simplificado */
 }
