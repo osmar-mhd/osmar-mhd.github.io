@@ -52,6 +52,20 @@ header {
         margin-bottom: auto;
         position: relative;
     }
+
+    .content {
+        flex-direction: column; /* Cambia la dirección del contenido a vertical */
+        justify-content: center; /* Centra los elementos */
+    }
+    
+    .info {
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+        margin-bottom: 2em; /* Añade un margen inferior entre las secciones */
+    }
+
+    .skills {
+        margin-bottom: 2em; /* Añade margen inferior si es necesario */
+    }
 }
 
 header nav ul {
