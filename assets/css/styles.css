@@ -96,6 +96,7 @@ section {
     padding: 1em 0;
     border-radius: 8px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    right: 0;
 }
 
 /* Style the tech skills and connect links */
@@ -113,11 +114,6 @@ ul.connect {
 
 ul.connect li {
     margin: 0 10px;
-}
-
-ul.connect a {
-    text-decoration: none;
-    color: #000;
 }
 
 /* Estilos para el h1 */
@@ -143,7 +139,7 @@ h2 {
 
 /* Estilos para el h3 */
 h3 {
-    font-size: 1em;
+    font-size: 0.5em;
     color: #e0e0e0; /* Color más claro que el h2 */
     margin-bottom: 0.5em;
     letter-spacing: 1px;
@@ -168,42 +164,53 @@ ul.tech-skills li {
     margin-bottom: 5px;
 }
 
-ul.connect {
+ul.connect, 
+ul.connect-invisible {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
 }
 
-ul.connect li {
+ul.connect li,
+ul.connect-invisible li {
     margin: 0 1em;
 }
 
-#home a {
+ul.connect a,
+ul.connect-invisible a {
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none; /* Quitar subrayado */
-    font-size: 1.5em; /* Tamaño de fuente */
+    font-size: 2em; /* Tamaño de fuente para connect */
     position: relative;
     padding-bottom: 2px;
     vertical-align: middle;
-    transition: all 0.3s ease;  /* Transición suave */
+    transition: all 0.3s ease; /* Transición suave */
 }
 
-#home a:hover {
-    color: #10c5b9; /* Color en hover */
+ul.connect-invisible a {
+    font-size: 1em; /* Tamaño de fuente menor para connect-invisible */
 }
 
-a i.fa-github  {
+ul.connect a:hover,
+ul.connect-invisible a:hover {
+    color: #10c5b9; /* Color en hover para ambos */
+}
+
+ul.connect a i.fa-github,
+ul.connect-invisible a i.fa-github {
     color: #7c7c7c; /* Color de GitHub */
 }
 
 /* Estilo para el enlace de LinkedIn */
-a i.fa-linkedin {
+ul.connect a i.fa-linkedin,
+ul.connect-invisible a i.fa-linkedin {
     color: #0A66C2; /* Color de LinkedIn */
 }
 
 /* Crea la línea debajo del texto */
-#home a::after {
+ul.connect a::after,
+ul.connect-invisible a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -211,18 +218,20 @@ a i.fa-linkedin {
     width: 0;
     height: 2px;
     background-color: #10c5b9; /* Color de la línea */
-    transition: width 0.3s ease;  /* Transición suave al expandir la línea */
+    transition: width 0.3s ease; /* Transición suave al expandir la línea */
 }
 
 /* Cuando el mouse pasa sobre el enlace */
-#home a:hover::after {
-    width: 100%;  /* La línea se expande a todo el ancho del enlace */
+ul.connect a:hover::after,
+ul.connect-invisible a:hover::after {
+    width: 100%; /* La línea se expande a todo el ancho del enlace */
 }
 
 /* Estilo para el texto */
-a span {
-    font-size: 16px;         /* Ajusta el tamaño del texto */
-    vertical-align: middle;  /* Alinea el texto con el icono */
+ul.connect a span,
+ul.connect-invisible a span {
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    vertical-align: middle; /* Alinea el texto con el icono */
 }
 
 #home p {
