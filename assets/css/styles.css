@@ -34,7 +34,6 @@ body {
         position: relative;
     }
     
-
     header nav a {
         display: flex;
         flex-direction: column;
@@ -96,61 +95,80 @@ body {
 @media (max-width: 910px) {
     header {
         background-image: linear-gradient(to right, #171235, #110821);
-        padding: 2em;
-        width: 100%; /* Asegurar que ocupe todo el ancho */
+        width: 100%;
         display: flex;
-        flex-direction: row; /* Coloca los elementos en fila horizontal */
+        flex-direction: row; /* Mantén los elementos en fila horizontal */
         position: fixed;
-        justify-content: space-around; /* Distribuye los elementos con espacio entre ellos */
+        justify-content: space-around;
         align-items: center;
-        top: auto;
+        top: 0;
+        left: 0;
         z-index: 1000;
     }
     
+    header nav ul {
+        display: flex;
+        flex-direction: row; /* Mantén los elementos principales en horizontal */
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 1.5em;
+        padding: 0;
+        margin: 0;
+    }
+    
     header nav a {
-        margin: 0 1em; /* Ajusta los márgenes para separar los enlaces horizontalmente */
+        margin-bottom: 0.5em;
         color: rgba(255, 255, 255, 0.754);
-        border-bottom: none; /* Quita el borde inferior */
-        padding: 1em;
-        font-size: 1em;
+        border-bottom: 0.1em solid #007BFF;
+        font-size: 0.8em;
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
-        position: relative;
+        display: flex;
+        flex-direction: column; /* Coloca el ícono y el texto en una columna */
+        align-items: center; /* Asegura que tanto el ícono como el texto estén centrados */
     }
     
-    header nav ul {
-        display: flex; /* Aplica flexbox al contenedor de los enlaces */
-        justify-content: center; /* Centra los elementos */
-        align-items: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    header nav a i {
+        font-size: 1.5em; /* Tamaño del ícono */
+        margin-bottom: 0.5em; /* Espacio entre el ícono y el texto */
+    }
+
+    main{
+        width: 100%;
     }
 
     section{
         width: auto;
         height: auto;
-        top: 5rem;
-        margin-bottom: auto;
-        padding-bottom: auto;
+        top: auto;
+        margin: 0;
+        padding: 0;
         position: relative;
     }
 
     .content {
-        margin: 0;
-        padding: 0;
-        flex-direction: column; /* Cambia la dirección del contenido a vertical */
+        margin: 0 auto; /* Centra el contenido */
+        padding: 0; /* Añade más espacio alrededor del contenido */
+        width: 100%; /* Asegura que el contenido abarque todo el ancho */
+        display: flex;
+        flex-direction: column; /* Coloca el contenido en una columna para mejor legibilidad */
         justify-content: center; /* Centra los elementos */
+        align-items: center; /* Alinea los elementos al centro */
     }
     
     .info {
-        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
-        margin-bottom: auto; /* Añade un margen inferior entre las secciones */
+        margin: 0; /* Elimina márgenes adicionales */
+        margin: 0 auto; /* Añade margen inferior entre secciones */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        text-align: justify; /* Centra el texto */
     }
 
     .skills {
-        margin-bottom: 2em; /* Añade margen inferior si es necesario */
+        margin: 0; /* Elimina los márgenes inferiores */
+        padding: 0; /* Elimina rellenos */
+        width: 100%;
     }
 
     .contact {
@@ -163,6 +181,7 @@ body {
         z-index: 1000;
     }
 
+    
 }
 
 /* Section */
@@ -203,7 +222,6 @@ section {
 #home strong {
     color: #007BFF; 
 }
-
 
 /* Banner */
 
